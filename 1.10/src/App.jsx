@@ -9,7 +9,7 @@ function App() {
     <>
       <div>
         <p>Give feedback</p>
-        <Button name1='Ms peta' name2='Kuka' name3='sho'></Button>
+        <Button name1='Good' name2='Neutral' name3='Bag'></Button>
 
       </div>
     </>
