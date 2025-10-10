@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { useState } from "react";
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    const [name, setName] = useState('');
+    const [names, setNames] = useState([]);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const handleAdd = (e) => {
+        e.preventDefault();
+        if (name.trim() !== '' && !names.includes(name)) {
+            setNames([...names, name]);
+            setName('');
+        }
+        // Можна також додати оповіщення якщо вже є такий елемент
+    };
+    console.log(name);
+    return (
+        <div>
+            <form>
+                <>
+                    <div className="form-group">
+                        <h2>Phonebook</h2>
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            placeholder="Add Name and Number"
+                        />
+                        <button onClick={handleAdd} type="button">ADD</button>
+                    </div>
+                    <ul>
+                        <h2>Numbers</h2>
+                        {names.map((n, idx) => <li key={idx}>{n}</li>)}
+                    </ul>
+                </>
+            </form>
+            <hr/>
+        </div>
+    )
+
 }
 
 export default App
