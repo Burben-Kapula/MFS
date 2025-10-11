@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3e4d98d-4d5d-44e5-b94d-5110a0a903bd" name="Changes" comment="Initial commit">
+    <list default="true" id="b3e4d98d-4d5d-44e5-b94d-5110a0a903bd" name="Changes" comment="11.10">
+      <change afterPath="$PROJECT_DIR$/osa_2/test-2/src/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/osa_2/test-2/src/Subfile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osa_2/2.8/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/2.8/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osa_2/2.8/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/2.8/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osa_2/2.9/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/2.9/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osa_2/2.9/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/2.9/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/osa_2/2.9/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/2.9/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osa_2/test-2/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/test-2/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osa_2/test-2/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/test-2/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osa_2/test-2/src/Note.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/osa_2/test-2/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/test-2/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/osa_2/test-2/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/osa_2/test-2/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Burben-Kapula/MFS.git&quot;,
-    &quot;accountId&quot;: &quot;878979d1-b493-452b-9856-fc5933737e58&quot;
+    &quot;accountId&quot;: &quot;635c73d2-a5e3-4ff2-9454-7cd1fdcf8a9d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -46,30 +48,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.App.jsx.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/maksym.kapula/Desktop/MFS/osa_2/2.6/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/oksan/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.20.0/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.App.jsx.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maksym.kapula/Desktop/MFS/osa_2/2.6/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/oksan/AppData/Roaming/JetBrains/WebStorm2025.2/node/versions/22.20.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\maksym.kapula\Desktop\MFS\osa_2\2.6\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\oksan\WebstormProjects\MFS\osa_2\test-2\src\assets" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -94,6 +100,9 @@
       <workItem from="1760172203881" duration="166000" />
       <workItem from="1760172749454" duration="1571000" />
       <workItem from="1760174504606" duration="2784000" />
+      <workItem from="1760178749325" duration="51000" />
+      <workItem from="1760181214065" duration="7462000" />
+      <workItem from="1760189434795" duration="5666000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -135,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760079702567</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="11.10">
+      <option name="closed" value="true" />
+      <created>1760178780330</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1760178780330</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +174,7 @@
     <MESSAGE value="fix3" />
     <MESSAGE value="try" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="11.10" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.10" />
   </component>
 </project>
