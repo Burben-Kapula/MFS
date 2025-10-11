@@ -1,39 +1,55 @@
 import { useState } from "react";
-import './App.css'
+import "./App.css";
+
 const App = () => {
-    const [name, setName] = useState('');
-    const [names, setNames] = useState([]);
+    const [name, setName] = useState("");
+    const [number, setNumber] = useState("");
+    const [contacts, setContacts] = useState([]);
 
     const handleAdd = (e) => {
         e.preventDefault();
-        if (name.trim() === '') return;
-        if (names.includes(name)) {
+        if (name.trim() === "" || number.trim() === "") return;
+
+        const newContact = `${name} ${number}`;
+
+        if (contacts.includes(newContact)) {
             window.alert(`${name} is already added to phonebook`);
         } else {
-            setNames([...names, name]);
-            setName('');
+            setContacts([...contacts, newContact]);
+            setName("");
+            setNumber("");
         }
     };
-
 
     return (
         <div className="App">
             <h2>Phonebook</h2>
             <form>
-
                 <input
                     type="text"
                     value={name}
-                    onChange={e => setName(e.target.value)}
-                    placeholder="Add Name and Number"
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Enter Name"
                 />
-                <button onClick={handleAdd} type="button">ADD</button>
-                <ul>
-                    {names.map((n, idx) => <li key={idx}>{n}</li>)}
-                </ul>
+                <input
+                    type="text"
+                    value={number}
+                    onChange={(e) => setNumber(e.target.value)}
+                    placeholder="Add Number"
+                />
+                <button onClick={handleAdd} type="button">
+                    ADD
+                </button>
             </form>
-            <h2>Numbers</h2>
+
+            <h2>Contacts</h2>
+            <ul>
+                {contacts.map((contact, idx) => (
+                    <li key={idx}>{contact}</li>
+                ))}
+            </ul>
         </div>
     );
-}
+};
+
 export default App;
