@@ -2,34 +2,47 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+const App = () => {
+    // ...
 
-function App() {
-  const [count, setCount] = useState(0)
+    useEffect(() => {
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        noteService
+            .getAll()
+            .then(response => {
+                setNotes(response.data)
+            })
+    }, [])
+
+    const toggleImportanceOf = id => {
+        const note = notes.find(n => n.id === id)
+        const changedNote = { ...note, important: !note.important }
+
+
+        noteService
+            .update(id, changedNote)
+            .then(response => {
+                setNotes(notes.map(note => note.id !== id ? note : response.data))
+            })
+    }
+
+    const addNote = (event) => {
+        event.preventDefault()
+        const noteObject = {
+            content: newNote,
+            important: Math.random() > 0.5
+        }
+
+
+        noteService
+            .create(noteObject)
+            .then(response => {
+                setNotes(notes.concat(response.data))
+                setNewNote('')
+            })
+    }
+
+    // ...
 }
 
 export default App
