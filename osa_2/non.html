@@ -1,0 +1,57 @@
+import { useState } from 'react'
+
+import './App.css'
+function App() {
+  const [num, setNumber] = useState()
+    const [name, SetName] = useState()
+    let list = []
+    function handleclick() {
+      console.log('test')
+    }
+    console.log('test why its not working')
+    return (
+    <>
+        <input type="text" name="add" id="add"
+        value={num}panel-11-12
+        onChange={e => setNumber(e.target.value)}
+               placeholder="add number"
+        />
+        <input type="text" name="add" id="add"
+               value={name}
+               onChange={e => SetName(e.target.value)}
+               placeholder="add name"
+        />
+        <button onclick={handleclick}>add</button>
+        <p>{list}</p>
+    </>
+  )
+}
+
+export default App
+
+
+
+
+
+
+//пофіксити хост чомусь в мене запускається не той сайт
+//додати функцію додавання тексту з текстового поля в список
+//зробити вивід списка на екран
+//додати алерт
+
+
+
+function addUser ({num, name}) {
+    let add = {num, name}
+    if (name !== '') {
+        add.push(name)
+    }
+
+    if (num !== '') {
+        add.push(name)
+    }
+    return (
+        <li>{add}</li>
+    )
+}
+export default addUser
